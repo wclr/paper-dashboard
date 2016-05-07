@@ -3,6 +3,7 @@ var fixedTop = false;
 var navbar_initialized = false;
 
 $(document).ready(function(){
+  
     window_width = $(window).width();
 
     // Init navigation toggle for small screens
@@ -12,7 +13,6 @@ $(document).ready(function(){
 
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
-
 });
 
 // activate collapse right menu when the windows is resized
@@ -36,7 +36,7 @@ lbd = {
             sidebar_active_color = $sidebar.data('active-color');
 
             $logo = $sidebar.find('.logo').first();
-            logo_content = $logo[0].outerHTML;
+            logo_content = $logo[0] && $logo[0].outerHTML;
 
             ul_content = '';
 
